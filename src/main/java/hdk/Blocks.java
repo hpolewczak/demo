@@ -26,6 +26,6 @@ public class Blocks {
         if (!queue.isEmpty()) {
             return getBlocksToRemove(board, queue.remove(), queue, visited);
         }
-        return board.verifyContainsGround(visited) ? List.of() : visited.stream().toList();
+        return board.verifyContainsGround(visited) ? List.of() : visited;
     }
 }

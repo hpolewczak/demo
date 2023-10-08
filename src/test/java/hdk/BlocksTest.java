@@ -48,8 +48,9 @@ class BlocksTest {
                 {true, true, false, false, false},
                 {false, true, true, false, false}
         };
-        // when/then
+        // when
         List<Point> pointsToRemove = blocks.getPointsToRemove(board, new Point(0, 4));
+        // then
         assertEquals(1, pointsToRemove.size());
         assertEquals(new Point(1, 4), pointsToRemove.get(0));
     }
@@ -71,8 +72,9 @@ class BlocksTest {
                 {true,  true,  false, false, false},
                 {false, true,  true,  false, false}
         };
-        // when /then
+        // when
         List<Point> pointsToRemove = blocks.getPointsToRemove(board, new Point(2, 2));
+        // then
         assertEquals(7, pointsToRemove.size());
         assertTrue(pointsToRemove.contains(new Point(0, 0)));
         assertTrue(pointsToRemove.contains(new Point(0, 1)));

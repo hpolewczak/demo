@@ -6,6 +6,8 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+
 
 class BoardTest {
     private static final boolean[][] ARRAY_BOARD = {
@@ -59,5 +61,15 @@ class BoardTest {
         assertEquals(2, neighbours.size());
         assertTrue(neighbours.contains(new Point(1, 2)));
         assertTrue(neighbours.contains(new Point(2, 1)));
+    }
+
+    @Test
+    void shouldContainsGround() {
+        assertTrue(board.verifyContainsGround(List.of(new Point(4, 0), new Point(3, 0))));
+    }
+
+    @Test
+    void shouldNotContainsGround() {
+        assertFalse(board.verifyContainsGround(List.of(new Point(2, 0), new Point(3, 0))));
     }
 }
