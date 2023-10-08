@@ -1,1 +1,1 @@
-# Sample app for calculating removed blocks
+## Sample app for calculating removed blocks
